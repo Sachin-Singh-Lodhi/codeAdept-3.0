@@ -1,0 +1,47 @@
+/* classes */
+
+.form-class {
+  margin: 3% 3%;
+}
+
+.regform {
+  height: 100%;
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ids */
+
+
+
+
+
+
+
+
+
+
+/* tags */
+body {
+  margin: 5% 5%;
+}
+
+h1 {
+  display:inline;
+  line-height: 1.5;
+  margin: 0 0;
+  padding: 8px 8px;
+  position: relative;
+  left: 10px;
+  bottom: 25px;
+  background: white
+}

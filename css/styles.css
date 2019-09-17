@@ -1,0 +1,123 @@
+/***************************** classes*************************************** */
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/indexbg.png");
+}
+
+.btn-blue {
+  padding: 2% 0;
+  margin: 10px 0;
+  color: #0066cc;
+  background-color: #8bffff;
+  font-family: "Ubuntu";
+  border-radius: 80px;
+  width: 120px;
+  height: 33px;
+  text-align: center;
+}
+
+.bottom-container {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #0066cc;
+  text-align: center;
+}
+
+.footer-link {
+  margin-right: 20px;
+}
+
+.card {
+  color: #0066cc;
+  background-color: inherit;
+  border: none;
+  margin-left: 70px;
+}
+
+.footer {
+  margin-top: 100px;
+  background: inherit;
+}
+
+.logo {
+  height: 50vh;
+  width: 55vw;
+  padding-left: 50px;
+  color:  #0066ff;
+}
+
+.mcontent {
+  border-right: 5px solid #10386C;
+  height: 45vh;
+  margin-top: 20px;
+}
+
+.mcontent-info {
+  padding-top: 70px;
+  padding-left: 30px;
+  text-align: center;
+  height: 50%;
+}
+
+.middle {
+  width: 70rem;
+}
+
+.transbox {
+  background-color: #ffffff;
+  border-radius: 5px;
+  opacity: 0.5;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox p, .transbox h3 {
+  font-weight: bold;
+  margin: 0 0;
+  color: #0066cc;
+}
+
+.transbox h3 {
+  margin-bottom: 3%;
+}
+
+.transbox p {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/***************************** ids*************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************** tags*************************************** */
+body {
+  height: 100%;
+}
