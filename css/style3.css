@@ -1,0 +1,52 @@
+.bg {
+  background-image: url("../images/indexbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  color: white;
+  font-weight: bold;
+}
+
+/* carousel */
+@media (max-width: 1028px) {
+  .carousel-caption {
+    position: absolute;
+    bottom: -10%;
+  }
+  .intro-heading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.carousel-caption {
+  color: #ff4500;
+  font-weight: bold;
+}
+.intro-img {
+  width: 100%;
+}
+
+
+/* about */
+
+.border {
+  border: 5px solid #fff;
+  padding: 3%;
+}
+
+
+.textdecoration {
+  text-decoration: underline;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.heading1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
