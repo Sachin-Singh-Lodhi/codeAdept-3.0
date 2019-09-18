@@ -1,14 +1,22 @@
 /* classes */
+.bg {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/indexbg.png");
+}
+
 
 .form-class {
   margin: 3% 3%;
+  color:  #8bffff;
 }
 
 .regform {
   height: 100%;
   border: 1px solid black;
 }
-
 
 
 
@@ -32,7 +40,8 @@
 
 /* tags */
 body {
-  margin: 5% 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 h1 {
@@ -43,5 +52,12 @@ h1 {
   position: relative;
   left: 10px;
   bottom: 25px;
-  background: white
+  color: #0066cc;
+  background: inherit;
+}
+
+@media (max-width: 1028px) {
+  h1 {
+    position: static;
+  }
 }
