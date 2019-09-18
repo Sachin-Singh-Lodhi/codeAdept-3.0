@@ -1,10 +1,23 @@
 /***************************** classes*************************************** */
 .bg {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../images/indexbg.png");
+}
+
+@media (max-width: 1028px) {
+  .btn-blue {
+    position: relative;
+    left: 70%;
+    color: #0066cc;
+    background-color: #8bffff;
+    font-family: "Ubuntu";
+    border-radius: 80px;
+    width: 120px;
+    height: 33px;
+  }
 }
 
 .btn-blue {
@@ -24,6 +37,7 @@
   margin-top: 20px;
   color: #0066cc;
   text-align: center;
+  margin-bottom: 5%;
 }
 
 .footer-link {
@@ -118,6 +132,3 @@
 
 
 /***************************** tags*************************************** */
-body {
-  height: 100%;
-}
