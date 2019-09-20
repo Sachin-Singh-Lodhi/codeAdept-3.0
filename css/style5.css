@@ -1,0 +1,17 @@
+.bg {
+  background-image: url("../images/indexbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+@media (max-width: 1028px) {
+  .bg {
+    height: 100vh;
+  }
+}
+
+body {
+  color: white;
+  font-weight: bold;
+}
