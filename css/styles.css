@@ -3,7 +3,6 @@
   background-image: url("../images/indexbg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
 }
 
 
@@ -47,6 +46,9 @@
     font-family: "Ubuntu";
     font-weight: 800;
   }
+  .bg {
+    height: 100vh;
+  }
   .navul {
     margin-right: auto;
   }
@@ -64,7 +66,7 @@
   }
   .leftcol {
     padding: 0 70px;
-    opacity: 0.5;
+    opacity: 0.7;
     font-weight: bold;
     color: #10386C;
   }
@@ -79,8 +81,6 @@
 
 /* footer */
 
-.footer {
-}
 
 .footer-link {
   margin-right: 20px;
