@@ -25,38 +25,62 @@
   <link rel="stylesheet" href="css/style2.css">
 </head>
 
-<body class = "bg">
+<body class="bg">
   <div class="regform container">
-    <h1>CodeAdept 3.0 Registration</h1>
-    <form class="form-class" onsubmit="return postToGoogle()" id="form" target="_self" action="https://docs.google.com/forms/d/e/1FAIpQLScKOQV96S3wK2S5GaeKiLtQ6Drsx00e4xNvum2Bwe4N2SQQ6g/formResponse" target="_self" id = "mG61Hd"  method = "POST" autocomplete="off">
+    <h1 id = "h-1">CodeAdept 3.0 Registration</h1>
+    <form class="form-class" onsubmit="return postToGoogle()" id="form" target="_self" action="https://docs.google.com/forms/d/e/1FAIpQLScKOQV96S3wK2S5GaeKiLtQ6Drsx00e4xNvum2Bwe4N2SQQ6g/formResponse" target="_self" id="mG61Hd" method="POST"
+      autocomplete="off">
+
+
       <div class="form-group">
         <label for="fname">First Name</label>
-        <input type="text" autocomplete="off" name = "entry.1829834873" required class="form-control" id="fname" aria-describedby="fnameHelp" placeholder="Enter first name">
+        <input type="text" autocomplete="off" name="entry.1829834873" required class="form-control" id="fname" aria-describedby="fnameHelp" placeholder="Enter first name">
         <span id="fname-small" class="form-text text-danger font-weight-bold"></span>
       </div>
+
+
       <div class="form-group">
         <label for="lname">Last Name</label>
-        <input type="text" autocomplete="off" name = "entry.1856991437" required class="form-control" id="lname" aria-describedby="lnameHelp" placeholder="Enter last name">
+        <input type="text" autocomplete="off" name="entry.1856991437" required class="form-control" id="lname" aria-describedby="lnameHelp" placeholder="Enter last name">
         <span id="lname-small" class="form-text text-danger font-weight-bold"></span>
       </div>
+
+
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" autocomplete="off" name = "entry.951032767" required class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <input type="email" autocomplete="off" name="entry.951032767" required class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
         <span id="email-small" class="form-text text-danger"></span>
       </div>
+
+
       <div class="form-group">
         <label for="branch">Branch</label>
-        <input type="text" autocomplete="off" name = "entry.921494148" required class="form-control" id="branch" aria-describedby="branchHelp" placeholder="Enter branch">
+        <select id="branch" placeholder="Select Branch" class="rounded pl-3 ml-3" required name="entry.921494148">
+          <option value="Branch: Computer Science">Computer Science</option>
+          <option value="Branch: Information Technology">Information Technology</option>
+          <option value="Branch: Electronics and Communication">Electronics and Communication</option>
+          <option value="Branch: Electrical and Electronics">Electrical and Electronics</option>
+          <option value="Branch: Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Branch: Automobile Engineering">Automobile Engineering</option>
+          <option value="Branch: Petrochemical Engineering">Petrochemical Engineering</option>
+          <option value="Branch: Civil Engineering">Civil Engineering</option>
+          <option value="Branch: MCA">MCA</option>
+
+        </select>
         <span id="branch-small" class="form-text text-danger"></span>
       </div>
+
+
       <div class="form-group">
         <label for="enrollment">Enrollment number</label>
-        <input type="text" autocomplete="off" name = "entry.451298275" required class="form-control" id="enrollment" aria-describedby="enrollmentHelp" placeholder="Enter enrollment number">
+        <input type="text" autocomplete="off" name="entry.451298275" required class="form-control" id="enrollment" aria-describedby="enrollmentHelp" placeholder="Enter enrollment number">
         <span id="enrollment-small" class="form-text text-danger"></span>
       </div>
+
+
       <div class="form-group">
-        <label for="year">Select Year</label>
-        <select id="year" placeholder="Select Year"  class = "rounded pl-3 ml-3" required name = "entry.1446548821">
+        <label for="year"class = "pr-2">Select Year</label>
+        <select id="year" placeholder="Select Year" class="rounded pl-3 ml-3" required name="entry.1446548821">
           <option value="Year: 1st">First Year</option>
           <option value="Year: 2nd">Second Year</option>
           <option value="Year: 3rd">Third Year</option>
@@ -64,110 +88,112 @@
         </select>
         <span id="year-small" class="form-text text-danger"></span>
       </div>
+
+
       <div class="form-group">
         <label for="mobile">Mobile Number</label>
-        <input type="mobile" autocomplete="off" name = "entry.1982684794" required class="form-control" id="mobile" aria-describedby="mobileHelp" placeholder="Enter mobile number">
+        <input type="mobile" autocomplete="off" name="entry.1982684794" required class="form-control" id="mobile" aria-describedby="mobileHelp" placeholder="Enter mobile number">
         <span id="mobile-small" class="form-text text-danger"></span>
       </div>
+
+
       <div class="form-group">
         <button class=" btn btn-lg mt-3 btn-outline-primary" type="submit" id="submit">Submit</button>
         <a class=" btn btn-lg mt-3 btn-outline-primary" href="index.html">Back</a>
       </div>
+
+
     </form>
-    <div id="success-msg">
-      <h3 style="text-align: center !important; display:none; color:#000"> Your Request has been posted to the database.</h3>
-      <p>You will soon get more information via email.</p>
+
+    <div id="success-msg" style = "display: none;">
+      <h1>CodeAdept 3.0 Registration Successful</h1>
+      <p class = "text-dark font-weight-bold">You will soon get more information via email.</p>
     </div>
   </div>
 </body>
 <script type="text/javascript">
+  function postToGoogle() {
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var email = $("#email").val();
+    var branch = $("#branch option:selected").text();
+    var enrollment = $("#enrollment").val();
+    var year = $("#year option:selected").text();
+    var mobile = $("#mobile").val();
 
-
-
-
-function postToGoogle() {
-  var fname = $("#fname").val();
-  var lname = $("#lname").val();
-  var email = $("#email").val();
-  var branch = $("#branch").val();
-  var enrollment = $("#enrollment").val();
-  var year = $("#year option:selected").text();
-  var mobile = $("#mobile").val();
-
-  if (fname.length < 3) {
-    document.getElementById('fname-small').innerHTML = "**Please enter valid first name(length > 2)";
-    document.getElementById('fname').focus();
-    return false;
-  }
-  if (/\d/.test(fname)) {
-    document.getElementById('fname-small').innerHTML = "**Please do not enter numbers in First Name";
-    document.getElementById('fname').focus();
-    return false;
-  }
-
-
-  if (lname.length < 3) {
-    document.getElementById('lname-small').innerHTML = "**Please enter valid last name(length > 2)";
-    document.getElementById('lname').focus();
-    return false;
-  }
-  if (/\d/.test(lname)) {
-    document.getElementById('lname-small').innerHTML = "**Please do not enter numbers in Last Name";
-    document.getElementById('lname').focus();
-    return false;
-  }
-
-
-  if (email.indexOf('@') == 0) {
-    document.getElementById('email-small').innerHTML = "**Please enter valid email";
-    document.getElementById('email').focus();
-    return false;
-  }
-  if (!(email.charAt(email.length - 4) == '.' || email.charAt(email.length - 3) == '.')) {
-    document.getElementById('email-small').innerHTML = "**Please write a valid Email";
-    document.getElementById('email').focus();
-    return false;
-  }
-
-
-  if (enrollment.length < 12) {
-    document.getElementById('enrollment-small').innerHTML = "**Please enter valid enrollment";
-    return false;
-  }
-
-  if (!(/^\d{10}$/.test(mobile))) {
-    document.getElementById('mobile-small').innerHTML = "**Please enter valid mobile number.";
-    return false;
-  }
-
-
-
-
-  $.ajax({
-    url: "https://docs.google.com/forms/d/e/1FAIpQLScKOQV96S3wK2S5GaeKiLtQ6Drsx00e4xNvum2Bwe4N2SQQ6g/formResponse?",
-    data: {
-      "entry.1829834873": fname,
-      "entry.1856991437": lname,
-      "entry.951032767": email,
-      "entry.921494148": branch,
-      "entry.451298275": enrollment,
-      "entry.1446548821": year,
-      "entry.1982684794": mobile
-    },
-    type: "POST",
-    dataType: "xml",
-    success: function(d) {},
-    error: function(x, y, z) {
-
-      $('#success-msg').show();
-      $('#form').hide();
-
+    if (fname.length < 3) {
+      document.getElementById('fname-small').innerHTML = "**Please enter valid first name(length > 2)";
+      document.getElementById('fname').focus();
+      return false;
     }
-  });
-  return false;
-}
+    if (/\d/.test(fname)) {
+      document.getElementById('fname-small').innerHTML = "**Please do not enter numbers in First Name";
+      document.getElementById('fname').focus();
+      return false;
+    }
 
 
+    if (lname.length < 3) {
+      document.getElementById('lname-small').innerHTML = "**Please enter valid last name(length > 2)";
+      document.getElementById('lname').focus();
+      return false;
+    }
+    if (/\d/.test(lname)) {
+      document.getElementById('lname-small').innerHTML = "**Please do not enter numbers in Last Name";
+      document.getElementById('lname').focus();
+      return false;
+    }
+
+
+    if (email.indexOf('@') == 0) {
+      document.getElementById('email-small').innerHTML = "**Please enter valid email";
+      document.getElementById('email').focus();
+      return false;
+    }
+    if (!(email.charAt(email.length - 4) == '.' || email.charAt(email.length - 3) == '.')) {
+      document.getElementById('email-small').innerHTML = "**Please write a valid Email";
+      document.getElementById('email').focus();
+      return false;
+    }
+
+
+    if (enrollment.length < 12) {
+      document.getElementById('enrollment-small').innerHTML = "**Please enter valid enrollment";
+      return false;
+    }
+
+    if (!(/^\d{10}$/.test(mobile))) {
+      document.getElementById('mobile-small').innerHTML = "**Please enter valid mobile number.";
+      return false;
+    }
+
+
+
+
+    $.ajax({
+      url: "https://docs.google.com/forms/d/e/1FAIpQLScKOQV96S3wK2S5GaeKiLtQ6Drsx00e4xNvum2Bwe4N2SQQ6g/formResponse?",
+      data: {
+        "entry.1829834873": fname,
+        "entry.1856991437": lname,
+        "entry.951032767": email,
+        "entry.921494148": branch,
+        "entry.451298275": enrollment,
+        "entry.1446548821": year,
+        "entry.1982684794": mobile
+      },
+      type: "POST",
+      dataType: "xml",
+      success: function(d) {},
+      error: function(x, y, z) {
+
+        $('#success-msg').show();
+        $('#form').hide();
+        $('#h-1').hide();
+
+      }
+    });
+    return false;
+  }
 </script>
 
 </html>
